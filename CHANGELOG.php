@@ -1,6 +1,6 @@
 <?php
 /**
-* @version		$Id: CHANGELOG.php 0000003 03-25-2013 17:56 Shankara
+* @version		$Id: CHANGELOG.php 0000004 12-21-2015 15:00 Shankara
 * @package		Joomla
 * @copyright	2013 proinsurer.com.ua
 */
@@ -17,6 +17,9 @@ $ -> Language fix or change
 ^ -> Change
 - -> Removed
 ! -> Note
+
+-------------------- 1.5.28 Stable Release [21-Desember-2015] ---------------
+* There is a security issue related to remote code execution. Fix session.php in Libraries
 
 -------------------- 1.5.27 Stable Release [27-March-2013] ------------------
 
