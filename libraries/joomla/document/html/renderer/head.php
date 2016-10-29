@@ -63,30 +63,30 @@ class JDocumentRendererHead extends JDocumentRenderer
 		$tagEnd	= ' />';
 
 		$strHtml = '';
-
-		// Generate base tag (need to happen first)
-		$base = $document->getBase();
-		if(!empty($base)) {
-			$strHtml .= $tab.'<base href="'.$document->getBase().'" />'.$lnEnd;
-		}
-
+		$strHtml .= $tab.'<title>'.htmlspecialchars($document->getTitle()).'</title>'.$lnEnd;
+			$conf = new JConfig;
+		$strHtml .= $tab.'<meta name="copyright" content="'.$conf->copyright.'" />'.$lnEnd;
+		
 		// Generate META tags (needs to happen as early as possible in the head)
 		foreach ($document->_metaTags as $type => $tag)
 		{
 			foreach ($tag as $name => $content)
 			{
-				if ($type == 'http-equiv') {
-					$strHtml .= $tab.'<meta http-equiv="'.$name.'" content="'.$content.'"'.$tagEnd.$lnEnd;
-				} elseif ($type == 'standard') {
-					$strHtml .= $tab.'<meta name="'.$name.'" content="'.str_replace('"',"'",$content).'"'.$tagEnd.$lnEnd;
-				}
+				$strHtml .= $tab.'<meta name="'.$name.'" content="'.$content.'"'.$tagEnd.$lnEnd;	
 			}
 		}
-
+		
 		$strHtml .= $tab.'<meta name="description" content="'.$document->getDescription().'" />'.$lnEnd;
-		$strHtml .= $tab.'<meta name="generator" content="'.$document->getGenerator().'" />'.$lnEnd;
+		
+		
+		
+		// Generate base tag (need to happen first)
+		$base = $document->getBase();
+		/* if(!empty($base)) {
+			 $strHtml .= $tab.'<base href="'.$document->getBase().'" />'.$lnEnd;
+		} */
 
-		$strHtml .= $tab.'<title>'.htmlspecialchars($document->getTitle()).'</title>'.$lnEnd;
+		
 
 		// Generate link declarations
 		foreach ($document->_links as $link) {

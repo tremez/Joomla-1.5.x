@@ -61,8 +61,9 @@ class JDocumentHTML extends JDocument
 		$this->_mime = 'text/html';
 
 		//set default document metadata
-		 $this->setMetaData('Content-Type', $this->_mime . '; charset=' . $this->_charset , true );
-		 $this->setMetaData('robots', 'index, follow' );
+		// $this->setMetaData('Content-Type','charset=' . $this->_charset , true );
+		
+		$this->setMetaData('robots', 'index, follow' );
 	}
 
 	/**
@@ -75,6 +76,7 @@ class JDocumentHTML extends JDocument
 	{
 		$data = array();
 		$data['title']		= $this->title;
+		$data['copyright']	= $this->copyright;
 		$data['description']= $this->description;
 		$data['link']		= $this->link;
 		$data['metaTags']	= $this->_metaTags;
@@ -96,6 +98,7 @@ class JDocumentHTML extends JDocument
 	function setHeadData($data)
 	{
 		$this->title		= (isset($data['title'])) ? $data['title'] : $this->title;
+		$this->copyright	= (isset($data['copyright'])) ? $data['copyright'] : $this->copyright;
 		$this->description	= (isset($data['description'])) ? $data['description'] : $this->description;
 		$this->link			= (isset($data['link'])) ? $data['link'] : $this->link;
 		$this->_metaTags	= (isset($data['metaTags'])) ? $data['metaTags'] : $this->_metaTags;
