@@ -1,30 +1,12 @@
 <?php
 /**
-* @version		$Id: CHANGELOG.php 22952 2012-03-27 00:40:16Z dextercowley $
+* @version		$Id: CHANGELOG.php 0000003 03-25-2013 17:56 Shankara
 * @package		Joomla
-* @copyright	Copyright (C) 2005 - 2012 Open Source Matters. All rights reserved.
-* @license		GNU/GPL, see LICENSE.php
-* Joomla! is free software. This version may have been modified pursuant
-* to the GNU General Public License, and as distributed it includes or
-* is derivative of works licensed under the GNU General Public License or
-* other free or open source software licenses.
-* See COPYRIGHT.php for copyright notices and details.
+* @copyright	2013 proinsurer.com.ua
 */
 
-// no direct access
 defined( '_JEXEC' ) or die( 'Restricted access' );
 ?>
-1. Copyright and disclaimer
----------------------------
-This application is opensource software released under the GPL.  Please
-see source code and the LICENSE file.
-
-2. Changelog
-------------
-This is a non-exhaustive (but still near complete) changelog for
-Joomla! 1.5, including beta and release candidate versions.
-Our thanks to all those people who've contributed bug reports and
-code fixes.
 
 Legend:
 
@@ -36,6 +18,20 @@ $ -> Language fix or change
 - -> Removed
 ! -> Note
 
+-------------------- 1.5.27 Stable Release [27-March-2013] ------------------
+
+^ Change knerpi/css files - kill rounded in template.
+^ Change system/system.css in order to improve usability.
+- Delete unnecessary files (administrator/kherpi/images/h_cherry: j_header_left.png, j_header_left_rtl.png, j_header_middle.png, j_header_right.png, j_header_right_rtl.png) 
+- Delete unnecessary files (administrator/kherpi/images/h_green: j_header_left.png, j_header_left_rtl.png, j_header_middle.png, j_header_right.png, j_header_right_rtl.png) 
+- Delete unnecessary files (administrator/kherpi/images/h_teal: j_header_left.png, j_header_left_rtl.png, j_header_middle.png, j_header_right.png, j_header_right_rtl.png) 
++ Add two files: administrator/kherpi/images/  login_lock.png, logo-small.png
+^ Change cpanel.php, index.php, login.php  in the root directory administrator/templates/khepri
+^ Change favicon.ico in the kherpi
+^ Change administrator/mod_login/mod_login.php
+- Remove <meta name="generator" content="Joomla! 1.5 - Open Source Content Management" />
+
+ 
 -------------------- 1.5.26 Stable Release [27-March-2012] ------------------
 
 -------------------- 1.5.25 Stable Release [14-November-2011] ------------------

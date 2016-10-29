@@ -1,30 +1,18 @@
 /**
-* @version $Id: general.css 14401 2010-01-26 14:10:00Z louis $
-* @copyright Copyright (C) 2005 - 2010 Open Source Matters. All rights reserved.
-* @license GNU/GPL, see LICENSE.php
-* Joomla! is free software. This version may have been modified pursuant
-* to the GNU General Public License, and as distributed it includes or
-* is derivative of works licensed under the GNU General Public License or
-* other free or open source software licenses.
-* See COPYRIGHT.php for copyright notices and details.
+* @version $Id: general.css 2013-03-07 17:23:00 paradox
+* @copyright Copyright (C) 2009 - 2013 proinsurer.com.ua
+* Joomla 1.5 Admin template main css file
+*
+* @author		Alexander Snitko <a.snitko@proinsurer.com.ua>
+* @package		Joomla
+* @since		1.5
+* @version    1.1
 */
-
-/**
- * Joomla! 1.5 Admin template main css file
- *
- * @author		Andy Miller <andy.miller@joomla.org>
- * @package		Joomla
- * @since		1.5
- * @version    1.0
- */
 
 /* -- General styles ------------------------------ */
 
 body {
-	margin: 10px; padding: 0;
 	background: #fff;
-	padding-bottom: 1px;
-
 	font-size: 11px;
 }
 
@@ -83,44 +71,46 @@ select:focus,
 textarea:focus { background-color: #ffd }
 
 /* -- overall styles ------------------------------ */
+#border-top.h_green div div  {
+	background: #2B5591;
+	color: #F9F9F9;
+	height: 40px;
+}
 
-#border-top.h_green          { background: url(../images/h_green/j_header_middle.png) repeat-x; }
-#border-top.h_green div      { background: url(../images/h_green/j_header_right.png) 100% 0 no-repeat; }
-#border-top.h_green div div  { background: url(../images/h_green/j_header_left.png) no-repeat; height: 54px; }
+#border-top.h_teal          {  }
+#border-top.h_teal div      { }
+#border-top.h_teal div div  { }
 
-#border-top.h_teal          { background: url(../images/h_teal/j_header_middle.png) repeat-x; }
-#border-top.h_teal div      { background: url(../images/h_teal/j_header_right.png) 100% 0 no-repeat; }
-#border-top.h_teal div div  { background: url(../images/h_teal/j_header_left.png) no-repeat; height: 54px; }
-
-#border-top.h_cherry          { background: url(../images/h_cherry/j_header_middle.png) repeat-x; }
-#border-top.h_cherry div      { background: url(../images/h_cherry/j_header_right.png) 100% 0 no-repeat; }
-#border-top.h_cherry div div  { background: url(../images/h_cherry/j_header_left.png) no-repeat; height: 54px; }
+#border-top.h_cherry          { }
+#border-top.h_cherry div      { }
+#border-top.h_cherry div div  {  }
 
 #border-top .title {
-	font-size: 22px; font-weight: bold; color: #fff; line-height: 44px;
-	padding-left: 180px;
+	display: block;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 33px;
+    padding: 3px 51px;
 }
 
 #border-top .version {
 	display: block; float: right;
-	color: #fff;
-	padding: 25px 5px 0 0;
+	padding: 17px 10px 0 0;
 }
 
-#border-bottom 			{ background: url(../images/j_bottom.png) repeat-x; }
-#border-bottom div  		{ background: url(../images/j_corner_br.png) 100% 0 no-repeat; }
-#border-bottom div div 	{ background: url(../images/j_corner_bl.png) no-repeat; height: 11px; }
+#border-bottom 			{}
+#border-bottom div  		{ }
+#border-bottom div div 	{  }
 
 #footer .copyright { margin: 10px; text-align: center; }
 
 #header-box  { border: 1px solid #ccc; background: #f0f0f0; }
 
 #content-box {
-	border-left: 1px solid #ccc;
-	border-right: 1px solid #ccc;
+	
 }
 
-#content-box .padding  { padding: 10px 10px 0 10px; }
+#content-box .padding  { padding: 10px 0 0; }
 
 #toolbar-box 			{ background: #fbfbfb; margin-bottom: 10px; }
 
@@ -402,7 +392,6 @@ table.adminlist thead th {
 	text-align: center;
 	background: #f0f0f0;
 	color: #666;
-	border-bottom: 1px solid #999;
 	border-left: 1px solid #fff;
 }
 
@@ -426,7 +415,7 @@ table.adminlist tfoot td,
 table.adminlist tfoot th { background-color: #f3f3f3; border-top: 1px solid #999; text-align: center; }
 
 table.adminlist td.order 		{ text-align: center; white-space: nowrap; }
-table.adminlist td.order span { float: left; display: block; width: 20px; text-align: center; }
+table.adminlist td.order span { float: left; display: block; width: 16px; text-align: center; }
 
 table.adminlist .pagination { display:table; padding:0;  margin:0 auto;	 }
 
@@ -590,7 +579,15 @@ a img.calendar {
 #system-message dd.message ul { background: #C3D2E5 url(../images/notice-info.png) 4px center no-repeat;}
 
 /* System Error Messages */
-#system-message dd.error ul { color: #c00; background: #E6C0C0 url(../images/notice-alert.png) 4px top no-repeat; border-top: 3px solid #DE7A7B; border-bottom: 3px solid #DE7A7B;}
+#system-message dd.error ul { color: #c00; background: #E6C0C0 url(../images/notice-alert.png) 4px top no-repeat;}
 
 /* System Notice Messages */
-#system-message dd.notice ul { color: #c00; background: #EFE7B8 url(../images/notice-note.png) 4px top no-repeat; border-top: 3px solid #F0DC7E; border-bottom: 3px solid #F0DC7E;}
+#system-message dd.notice ul { color: #c00; background: #EFE7B8 url(../images/notice-note.png) 4px top no-repeat;}
+
+#logo-small-pro{
+    background: url("../images/logo-small.png") no-repeat scroll 0 0 transparent;
+    height: 30px;
+    text-indent: -9999px;
+    width: 167px;
+	float:right;
+}

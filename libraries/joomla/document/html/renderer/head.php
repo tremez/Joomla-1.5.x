@@ -1,15 +1,8 @@
 <?php
 /**
-* @version		$Id: head.php 21074 2011-04-04 16:51:40Z dextercowley $
-* @package		Joomla.Framework
-* @subpackage	Document
-* @copyright	Copyright (C) 2005 - 2010 Open Source Matters. All rights reserved.
-* @license		GNU/GPL, see LICENSE.php
-* Joomla! is free software. This version may have been modified pursuant
-* to the GNU General Public License, and as distributed it includes or
-* is derivative of works licensed under the GNU General Public License or
-* other free or open source software licenses.
-* See COPYRIGHT.php for copyright notices and details.
+* @version		$Id: CHANGELOG.php 0000003 03-25-2013 18:47 Shankara
+* @package		Joomla
+* @copyright	2013 proinsurer.com.ua
 */
 
 // Check to ensure this file is within the rest of the framework
@@ -63,30 +56,29 @@ class JDocumentRendererHead extends JDocumentRenderer
 		$tagEnd	= ' />';
 
 		$strHtml = '';
-		$strHtml .= $tab.'<title>'.htmlspecialchars($document->getTitle()).'</title>'.$lnEnd;
-			$conf = new JConfig;
-		$strHtml .= $tab.'<meta name="copyright" content="'.$conf->copyright.'" />'.$lnEnd;
-		
+
+		// Generate base tag (need to happen first)
+		$base = $document->getBase();
+		if(!empty($base)) {
+			$strHtml .= $tab.'<base href="'.$document->getBase().'" />'.$lnEnd;
+		}
+
 		// Generate META tags (needs to happen as early as possible in the head)
 		foreach ($document->_metaTags as $type => $tag)
 		{
 			foreach ($tag as $name => $content)
 			{
-				$strHtml .= $tab.'<meta name="'.$name.'" content="'.$content.'"'.$tagEnd.$lnEnd;	
+				if ($type == 'http-equiv') {
+					$strHtml .= $tab.'<meta http-equiv="'.$name.'" content="'.$content.'"'.$tagEnd.$lnEnd;
+				} elseif ($type == 'standard') {
+					$strHtml .= $tab.'<meta name="'.$name.'" content="'.str_replace('"',"'",$content).'"'.$tagEnd.$lnEnd;
+				}
 			}
 		}
-		
-		$strHtml .= $tab.'<meta name="description" content="'.$document->getDescription().'" />'.$lnEnd;
-		
-		
-		
-		// Generate base tag (need to happen first)
-		$base = $document->getBase();
-		/* if(!empty($base)) {
-			 $strHtml .= $tab.'<base href="'.$document->getBase().'" />'.$lnEnd;
-		} */
 
-		
+		$strHtml .= $tab.'<meta name="description" content="'.$document->getDescription().'" />'.$lnEnd;
+
+		$strHtml .= $tab.'<title>'.htmlspecialchars($document->getTitle()).'</title>'.$lnEnd;
 
 		// Generate link declarations
 		foreach ($document->_links as $link) {

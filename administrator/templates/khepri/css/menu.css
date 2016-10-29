@@ -1,22 +1,13 @@
 /**
-* @version $Id: menu.css 14401 2010-01-26 14:10:00Z louis $
-* @copyright Copyright (C) 2005 - 2010 Open Source Matters. All rights reserved.
-* @license GNU/GPL, see LICENSE.php
-* Joomla! is free software. This version may have been modified pursuant
-* to the GNU General Public License, and as distributed it includes or
-* is derivative of works licensed under the GNU General Public License or
-* other free or open source software licenses.
-* See COPYRIGHT.php for copyright notices and details.
+* @version $Id: menu.css 2013-03-07 17:23:00 paradox
+* @copyright Copyright (C) 2009 - 2013 proinsurer.com.ua
+* JMenu javascript behavior styling
+*
+* @author		Alexander Snitko <a.snitko@proinsurer.com.ua>
+* @package		Joomla
+* @since		1.5
+* @version      1.1
 */
-
-/**
- * JMenu javascript behavior styling
- *
- * @author		Johan Janssens <johan.janssens@joomla.org>
- * @package		Joomla
- * @since		1.5
- * @version    1.0
- */
 
 /* ---- Basic menu styles ------------------- */
 
@@ -68,15 +59,15 @@
 }
 
 /* 1 level - hover */
-#menu li.hover a {  background-color: #E7EDDF; border-left: 1px solid #6D9D2E;  border-right:1px solid #6D9D2E; margin: 0; }
+#menu li.hover a {  background-color: #CBE7A4; /* border-left: 1px solid #6D9D2E;  border-right:1px solid #6D9D2E; */ margin: 0 1px; }
 /* 2 level - normal */
 #menu li.hover li a { background-color: transparent; border: 0 none;   margin: 2px;  }
 /* 2 level - hover */
-#menu li.hover li.hover a { background-color: #E7EDDF; border: 1px solid #6D9D2E;  margin: 1px;   }
+#menu li.hover li.hover a { background-color: #CBE7A4;   }
 /* 3 level - normal */
 #menu li.hover li.hover li a { background-color: transparent; border: 0 none;   margin: 2px;  }
 /* 3 level - hover */
-#menu li.hover li.hover li a:hover { background-color: #E7EDDF; border: 1px solid #6D9D2E;  margin: 1px;  }
+#menu li.hover li.hover li a:hover { background-color: #CBE7A4; }
 
 /* submenu styling */
 #submenu {

@@ -1,17 +1,10 @@
 <?php
 /**
-* @version		$Id: mod_login.php 14401 2010-01-26 14:10:00Z louis $
+* @version		$Id: CHANGELOG.php 0000003 03-25-2013 18:35 Shankara
 * @package		Joomla
-* @copyright	Copyright (C) 2005 - 2010 Open Source Matters. All rights reserved.
-* @license		GNU/GPL, see LICENSE.php
-* Joomla! is free software. This version may have been modified pursuant
-* to the GNU General Public License, and as distributed it includes or
-* is derivative of works licensed under the GNU General Public License or
-* other free or open source software licenses.
-* See COPYRIGHT.php for copyright notices and details.
+* @copyright	2013 proinsurer.com.ua
 */
 
-// no direct access
 defined( '_JEXEC' ) or die( 'Restricted access' );
 
 jimport('joomla.language.helper');
@@ -37,15 +30,15 @@ $langs = JHTML::_('select.genericlist',   $languages, 'lang', ' class="inputbox"
 		JHTML::_('script', 'openid.js');
 endif; ?>
 <form action="<?php echo JRoute::_( 'index.php', true, $params->get('usesecure')); ?>" method="post" name="login" id="form-login" style="clear: both;">
-	<p id="form-login-username">
+	<div id="form-login-username">
 		<label for="modlgn_username"><?php echo JText::_('Username'); ?></label>
 		<input name="username" id="modlgn_username" type="text" class="inputbox" size="15" />
-	</p>
+	</div>
 
-	<p id="form-login-password">
+	<div id="form-login-password">
 		<label for="modlgn_passwd"><?php echo JText::_('Password'); ?></label>
 		<input name="passwd" id="modlgn_passwd" type="password" class="inputbox" size="15" />
-	</p>
+	</div>
 	<?php
 	if($error = JError::getError(true)) {
 		echo '<p id="login-error-message">';
@@ -53,10 +46,7 @@ endif; ?>
 		echo '<p>';
 	}
 	?>
-	<p id="form-login-lang" style="clear: both;">
-		<label for="lang"><?php echo JText::_('Language'); ?></label>
-		<?php echo $langs; ?>
-	</p>
+	
 	<div class="button_holder">
 	<div class="button1">
 		<div class="next">

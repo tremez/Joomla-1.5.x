@@ -40,7 +40,7 @@ p {
 }
 
 #lock  {
-	background: url(../images/j_login_lock.jpg) 50% 0 no-repeat;
+	background: url(../images/login_lock.png) 50% 0 no-repeat;
 	width: 150px;
 	height: 137px;
 }
@@ -80,9 +80,36 @@ p {
 	font-weight: bold;
 }
 
+div.m form#form-login div#form-login-username label {
+	width: 50px;
+}
+div.m form#form-login div#form-login-username input#modlgn_username.inputbox{}
+div.m form#form-login div#form-login-password label {
+	width: 50px;
+}
+div.m form#form-login div#form-login-password input#modlgn_passwd.inputbox{}
+div.m form#form-login div.button_holder div.button1 {
+	background:none;
+	padding: 0px;
+	margin: 0px;
+}
+div.m form#form-login div.button_holder div.button1 div.next {
+	background:none;
+	background-color: #F1ECBF;
+}
+div.m form#form-login div.button_holder div.button1 div.next a {
+	padding: 0 37px 0 37px;
+}
+
+#form-login-password {
+	float: left; width: 350px;
+}
+#form-login-username {
+	float: left; width: 350px;
+}
 #form-login .button_holder {
 	float: left;
-	padding-left: 180px;
+	padding-left: 80px;
 }
 
 #form-login div.button1{

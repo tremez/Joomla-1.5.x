@@ -1,14 +1,8 @@
 <?php
 /**
- * @version		$Id: version.php 22952 2012-03-27 00:40:16Z dextercowley $
- * @package	Joomla.Framework
- * @copyright	Copyright (C) 2005 - 2012 Open Source Matters. All rights reserved.
- * @license		GNU/GPL, see LICENSE.php
- * Joomla! is free software. This version may have been modified pursuant
- * to the GNU General Public License, and as distributed it includes or
- * is derivative of works licensed under the GNU General Public License or
- * other free or open source software licenses.
- * See COPYRIGHT.php for copyright notices and details.
+* @version		$Id: CHANGELOG.php 0000003 03-25-2013 19:04 Shankara
+* @package		Joomla
+* @copyright	2013 proinsurer.com.ua
  */
 defined('JPATH_BASE') or die();
 /**
@@ -26,21 +20,21 @@ class JVersion
 	/** @var string Development Status */
 	var $DEV_STATUS = 'Stable';
 	/** @var int Sub Release Level */
-	var $DEV_LEVEL 	= '26';
+	var $DEV_LEVEL 	= '27';
 	/** @var int build Number */
 	var $BUILD	= '';
 	/** @var string Codename */
-	var $CODENAME 	= 'senu takaa ama busani';
+	var $CODENAME 	= 'joomla pro v1.5.27';
 	/** @var string Date */
-	var $RELDATE 	= '27-March-2012';
+	var $RELDATE 	= '25-March-2013';
 	/** @var string Time */
-	var $RELTIME 	= '18:00';
+	var $RELTIME 	= '19:04';
 	/** @var string Timezone */
 	var $RELTZ 	= 'GMT';
 	/** @var string Copyright Text */
-	var $COPYRIGHT 	= 'Copyright (C) 2005 - 2011 Open Source Matters. All rights reserved.';
+	var $COPYRIGHT 	= 'Copyright (C) 2013 Open Source Matters. All rights reserved.';
 	/** @var string URL */
-	var $URL 	= '<a href="http://www.joomla.org">Joomla!</a> is Free Software released under the GNU General Public License.';
+	var $URL 	= '<a href="http://www.proinsurer.com.ua">Proinsurer</a> - поддержка линейки Joomla v1.5.';
 
 	/**
 	 *

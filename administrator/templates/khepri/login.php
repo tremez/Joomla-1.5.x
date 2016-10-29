@@ -1,15 +1,8 @@
 <?php
 /**
- * @copyright	Copyright (C) 2005 - 2010 Open Source Matters. All rights reserved.
- * @license		GNU/GPL, see LICENSE.php
- * Joomla! is free software. This version may have been modified pursuant
- * to the GNU General Public License, and as distributed it includes or
- * is derivative of works licensed under the GNU General Public License or
- * other free or open source software licenses.
- * See COPYRIGHT.php for copyright notices and details.
+ * @copyright	2013 Proinsurer
+ * @author		Change file Alexander Snitko <a.snitko@proinsurer.com.ua>
  */
-
-// no direct access
 defined( '_JEXEC' ) or die( 'Restricted access' );
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -46,13 +39,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 </script>
 </head>
 <body onload="javascript:setFocus()">
-	<div id="border-top" class="<?php echo $this->params->get('headerColor','green');?>">
-		<div>
-			<div>
-				<span class="title"><?php echo $this->params->get('showSiteName') ? $mainframe->getCfg( 'sitename' ) : JText::_('Administration'); ?></span>
-			</div>
-		</div>
-	</div>
+	
 	<div id="content-box">
 		<div class="padding">
 			<div id="element-box" class="login">
@@ -63,12 +50,12 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 				</div>
 				<div class="m">
 
-					<h1><?php echo JText::_('Joomla! Administration Login') ?></h1>
+					<h1>Административный раздел</h1>
+					<p>Внимание! Все попытки несанкционированного доступа фиксируются</p>
 					<jdoc:include type="message" />
 					<jdoc:include type="component" />
-					<p><?php echo JText::_('DESCUSEVALIDLOGIN') ?></p>
 					<p>
-						<a href="<?php echo JURI::root(); ?>"><?php echo JText::_('Return to site Home Page') ?></a>
+						<a href="<?php echo JURI::root(); ?>">Вернуться на сайт</a>
 					</p>
 					<div id="lock"></div>
 					<div class="clr"></div>
@@ -86,12 +73,6 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 		</div>
 	</div>
 	<div id="border-bottom"><div><div></div></div>
-</div>
-<div id="footer">
-	<p class="copyright">
-		<a href="http://www.joomla.org" target="_blank">Joomla!</a>
-		<?php echo JText::_('ISFREESOFTWARE') ?>
-	</p>
 </div>
 </body>
 </html>
